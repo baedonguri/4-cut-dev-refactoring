@@ -34,7 +34,9 @@ const KakaoAuth = () => {
       window.Kakao.Auth.setAccessToken(res.data.access_token);
       localStorage.setItem("token", res.data.access_token);
       navigate("/profile");
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
